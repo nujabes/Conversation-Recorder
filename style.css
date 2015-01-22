@@ -1,0 +1,89 @@
+body {
+width: 100%;
+/*overflow-y:hidden; */
+overflow-x:auto;
+background-color: #cacaca;
+}
+
+/*anchor*/
+a {
+text-decoration: none;
+color : #333333;
+outline: 0;
+}
+a:link, a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+
+/*reset*/
+html, body, div, span, object, param, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+address, big, cite, code, del, dfn, em, font, img, ins,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, button, br {
+margin: 0;
+padding: 0;
+border: none 0;
+}
+ol, ul, li {
+list-style : none;
+}
+h1, h2, h3, h4, h5, h6 {
+font-weight: normal;
+font-size : 100%;
+}
+address, caption, em {
+font-weight : normal;
+font-style : normal;
+}
+input, img, table {
+vertical-align: middle;
+}
+
+
+#cotainer{position: relative; width: 1200px; margin:0 auto; text-align: center;}
+
+.inputbox {
+width: 420px;
+height: 200px;
+margin: 50px auto 0;
+/* display: inline; */
+}
+
+input#console {
+border: 1px solid #999;
+padding: 10px 0 7px 11px;
+width: 100%;
+font: 21px normal helvetica;
+margin: 10px 0 10px 0;
+}
+
+#history{color: #999;}
+#history p {
+height: 21px;
+padding: 2px 0;
+}
+
+span.title {
+font-weight: bold;
+}
+span.startTime {
+font-size: 0.8em;
+margin-left: 20px;
+color: #999;
+}
+span.closeTime {
+font-size: 0.8em;
+margin-left: 20px;
+color: #999;
+}
+span.duration {
+font-size: 0.8em;
+margin-left: 20px;
+color: #EB2121;;
+}
