@@ -90,12 +90,40 @@ color: #EB2121;;
 .glyphicon-stop{
 	color: #d44950;	
 }
+.inputContainer {
+    position: absolute;
+    top: 120px;
+    width: 440px;
+}
 
+div#container {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
 .topicButtons .btn-group {
 margin-right: 5px;
 margin-bottom: 5px;
 }
 .guide {
-color: #aaa;
+color: #9d9d9d;
 font-size: 12px;
+}
+.topicButtons {
+position: absolute;
+right: 0;
+width: 150px;
+top: 6px;
+}
+div#results {
+    overflow: hidden;
+    height: 100px;
+}
+.barGroup {
+position: absolute;
+width: 440px;
+top: 200px;
+}
+.barGroup .progress {
+margin-bottom: 6px;
 }
