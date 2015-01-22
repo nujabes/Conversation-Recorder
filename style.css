@@ -58,7 +58,7 @@ margin: 50px auto 0;
 input#console {
 border: 1px solid #999;
 padding: 10px 0 7px 11px;
-width: 100%;
+/*width: 100%;*/
 font: 21px normal helvetica;
 margin: 10px 0 10px 0;
 }
@@ -86,4 +86,16 @@ span.duration {
 font-size: 0.8em;
 margin-left: 20px;
 color: #EB2121;;
+}
+.glyphicon-stop{
+	color: #d44950;	
+}
+
+.topicButtons .btn-group {
+margin-right: 5px;
+margin-bottom: 5px;
+}
+.guide {
+color: #aaa;
+font-size: 12px;
 }
