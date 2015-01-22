@@ -1,6 +1,8 @@
-// v0.1
-// input과 history 구현
-// hisory 5개만 유지 구현
+// v0.2
+// result 분리
+// 입력값을 array로 만들어 입력된 시간을 갖음.
+// closeTag로 끝나는 시간 입력
+// 정규식으로 한글, 영문만 입력받음
 
 jQuery(document).ready(function($) {
 	var inputbox = $('body #console');
@@ -26,30 +28,24 @@ jQuery(document).ready(function($) {
 	};
 
 	var processInput = function(input) {
-		// input = input.replace('<', '%3C');
-		// input = input.replace('>', '%3E');
 		history.append('<p>' + input + '</p>');
 
-		var match1 = input.match(/^<([^<^\/]*)>$/);
-		var match2 = input.match(/^<\/([^<]*)>$/);
+		var openTag = input.match(/^([ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\s|\-]*)$/);
+		var closeTag = input.match(/^[\/]([ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\s|\-]*)$/);
 
-		if (match1 !== null) {
-			var object = [];
-			object.name = match1[1];
-			object.startTime = new Date();
-			topics.push(object);
-		} else if (match2 !== null) {
-			var name = match2[1];
-
+		if (openTag !== null) {
+			topics.push(new Topic(openTag[1], new Date()));
+		} else if (closeTag !== null) {
+			var name = closeTag[1];
 			for (var i in topics) {
 				if (topics[i].name == name) {
-					topics[i].closeTime = new Date();
+					topics[i].finish(new Date());
 					break;
 				}
 			}
 		}
 
-		// console.log(topics);
+		console.log(topics);
 	};
 
 
@@ -66,7 +62,7 @@ jQuery(document).ready(function($) {
 				html += '<span class="startTime">' + formatTime(topic.startTime) + '</span>';
 				if(topic.closeTime !== undefined){
 					html += '<span class="closeTime">' + formatTime(topic.closeTime) + '</span>';
-					html += '<span class="duration">' + formatMinute( topic.closeTime - topic.startTime ) + '</span>';
+					html += '<span class="duration">' + formatMinute( topic.duration ) + '</span>';
 				}
 				html += '</ul>';
 			}
@@ -74,28 +70,47 @@ jQuery(document).ready(function($) {
 			// console.log(html);
 			$result.html(html);
 		}
-
+		console.log(topics);
 		cleanHistory();
 		inputbox.val('');
 	};
 
-	var formatTime = function(time){
-		var hour = time.getHours(),
-		min = time.getMinutes(),
-		sec = time.getSeconds();
-		return hour+'am '+':'+ min +':'+ sec;
-	};
-	
-	var formatMinute = function(time){
-		// var hour = time.getHours(),
-		// min = time.getMinutes(),
-		time = Math.floor(time / 1000);
-		console.log(time);
-		var minutes = Math.floor(time / 60);
-		var seconds = time - minutes * 60;
 
-		// sec = time.getMilliseconds();
-		return minutes + 'min' + seconds + 's';
+	var Topic = function(name, created) {
+		var name,
+			startTime,
+			closeTime,
+			duration,
+			going;
+		this.name = name;
+		this.startTime = created;
+	};
+
+	Topic.prototype = {
+		finish : function(time){
+			this.closeTime = time;
+			this.duration = this.closeTime - this.startTime;
+		}
 	};
 
 });
+
+var formatTime = function(time) {
+	var hour = time.getHours(),
+		min = time.getMinutes(),
+		sec = time.getSeconds();
+	return hour + 'am ' + ':' + min + ':' + sec;
+};
+
+var formatMinute = function(time) {
+	// var hour = time.getHours(),
+	// min = time.getMinutes(),
+	time = Math.floor(time / 1000);
+	console.log(time);
+	var minutes = Math.floor(time / 60);
+	var seconds = time - minutes * 60;
+
+	// sec = time.getMilliseconds();
+	return minutes + 'min' + seconds + 's';
+};
+
