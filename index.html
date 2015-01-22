@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Conversation Recorder</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<div class="inputbox">
+		<h1>Conversation Recorder <sup>0.5</sup></h1>
+			<div class="inputContainer">
+				<p class="guide">start topic : 'topic', close topic : '/topic'</p>
+				<div class="input-group">
+					<input type="text" id="console" class="form-control" placeholder="Start Topic, Close with '/'">
+					<span class="input-group-btn">
+						<button class="btn btn-default inputEnter btn-success" type="button">Enter</button>
+					</span>
+				</div><!-- /input-group -->
+			</div><!-- /.row -->
+			<div id="results"></div>
+					<!-- Split button -->
+			<div class="topicButtons"></div>
+			<div class="barGroup">
+				<canvas id="barCanvas"></canvas>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/lodash.min.js"></script>
+<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+<!-- <script src="js/jquery-ui.1.11.0.min.js"></script> -->
+<script src="js/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-22222925-11', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</html>

@@ -1,0 +1,151 @@
+body {
+width: 100%;
+/*overflow-y:hidden; */
+overflow-x:auto;
+background-color: #F9F9F9;
+}
+
+/*anchor*/
+a {
+text-decoration: none;
+color : #333333;
+outline: 0;
+}
+a:link, a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+
+/*reset*/
+html, body, div, span, object, param, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr,
+address, big, cite, code, del, dfn, em, font, img, ins,
+q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, button, br {
+margin: 0;
+padding: 0;
+border: none 0;
+}
+ol, ul, li {
+list-style : none;
+}
+h1, h2, h3, h4, h5, h6 {
+font-weight: normal;
+font-size : 100%;
+}
+address, caption, em {
+font-weight : normal;
+font-style : normal;
+}
+input, img, table {
+vertical-align: middle;
+}
+
+
+#cotainer{position: relative; width: 1200px; margin:0 auto; text-align: center;}
+
+.inputbox {
+/*width: 420px;*/
+height: 200px;
+max-width: 650px;
+margin: 0 auto 0;
+/* display: inline; */
+}
+
+input#console {
+border: 1px solid #999;
+padding: 10px 0 7px 11px;
+/*width: 100%;*/
+font: 21px normal helvetica;
+margin: 10px 0 10px 0;
+}
+
+#history{color: #999;}
+#history p {
+height: 21px;
+padding: 2px 0;
+}
+
+span.title {
+font-weight: bold;
+}
+span.startTime {
+font-size: 0.8em;
+margin-left: 20px;
+color: #999;
+}
+span.closeTime {
+font-size: 0.8em;
+margin-left: 20px;
+color: #999;
+}
+span.duration {
+font-size: 0.8em;
+margin-left: 20px;
+color: #EB2121;;
+}
+.glyphicon-stop{
+	color: #d44950;	
+}
+h1 {
+font-size: 50px;
+
+margin: 51px 0 13px;
+font-family: 'Karla', sans-serif;
+letter-spacing: -3px;
+font-weight: 700;
+}
+h1 sup {
+letter-spacing: -2px;
+font-size: 0.4em;
+margin-top: -50px;
+top: -28px;
+}
+.inputContainer {
+position: relative;
+/* top: 120px; */
+width: 440px;
+margin: 30px 0 20px 0;
+}
+div#container {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.guide {
+color: #9d9d9d;
+font-size: 12px;
+display: none;
+}
+.topicButtons {
+position: absolute;
+right: 0;
+width: 140px;
+top: 94px;
+}
+.topicButtons .btn-group {
+display: block;
+overflow: hidden;	
+margin-right: 5px;
+margin-bottom: 5px;
+}
+div#results {
+overflow-y: auto;
+height: 108px;
+width: 440px;
+background: #eaeaea;
+padding: 4px 0px 11px 11px;
+}
+.barGroup {
+position: relative;
+width: 440px;
+/* top: 200px; */
+margin-top: 26px;
+}
+.barGroup .progress {
+margin-bottom: 6px;
+}
