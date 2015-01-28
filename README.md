@@ -3,8 +3,9 @@ Conversation Recorder
 
 여러 사람이 모인 모임이나 워크샵에서 때로는 다양한 주제들이 나타났다 전환되곤 합니다. '이런 과정을 기록할 수 없을까'하는 생각에서 Conversation Recorder는 시작되었습니다.
 
-demo : <http://nujabes.github.io/Conversation-Recorder/>  
-project introduce : <http://kmyh.kr/conversation-recorder/>
+demo : <http://nujabes.github.io/Conversation-Recorder/>
+
+project  : <http://kmyh.kr/conversation-recorder/>
 
 
 기능
